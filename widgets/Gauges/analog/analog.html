@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<script type="text/javascript" src="Analog.js"></script>
+</head>
+
+<body>
+	<div id="ag"></div>
+	<div id="ag2"></div>
+	<script>
+		console.log("start");
+		var ag = new Analog(200, "ag");
+		ag.draw();
+		var that = ag.this;
+		setTimeout(function(){ ag.setValue.call(ag, 50)}, 1000);
+		setTimeout(function(){ ag.setValue.call(ag, 25)}, 2000);
+		setTimeout(function(){ ag.setValue.call(ag, 75)}, 3000);
+		setTimeout(function(){ ag.setValue.call(ag, 100)}, 4000);
+		setTimeout(function(){ ag.setValue.call(ag, 0)}, 5000);
+		
+	</script>
+</body>
+</html>
